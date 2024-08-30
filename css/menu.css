@@ -1,0 +1,111 @@
+/* Estilo para el menú */
+.navbar {
+    padding: 0;
+}
+.navbar-custom {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out; 
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "Questrial", Verdana;
+}
+.navbar-custom .nav-link:hover {
+    color: #F9b9f2;
+}
+.navbar-custom .navbar-brand {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transition: background-image 0.5s ease-in-out;
+}
+.navbar-custom .navbar-brand img {
+    width: 85px;
+    height: auto;
+    margin: 5px;
+    display: block;
+}
+.navbar-custom .navbar-brand:hover img {
+    filter: invert(73%) sepia(51%) saturate(305%) hue-rotate(288deg) brightness(252%) contrast(101%);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Ajuste del botón toggler */
+.navbar-toggler {
+    border-color: white;
+    margin-right: 15px;
+}
+.navbar-toggler:hover {
+    border-color: #F9b9f2;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(249,185,242, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Fondo del collapse cuando se despliega con el toggler */
+.navbar-custom .navbar-collapse.show {
+    text-align: center;
+    background-color: transparent; 
+    transition: background-color 0.3s ease;
+}
+
+/* clase para fijar el menu en el top */
+.menu-fijo {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    overflow: initial;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+/* media queries */
+/* queries para diferentes resoluciones */
+@media (max-width:576px) {
+    .navbar-custom .navbar-collapse.show {
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: background-color 0.3s ease;
+    }
+}
+@media (max-height: 599px) {
+    .navbar-custom .navbar-collapse.show {
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: background-color 0.3s ease;
+    }
+}
+@media (max-width: 992px) {
+    .navbar-custom .navbar-collapse.show {
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease;
+    }
+}
+
+/* key frames */
+/* Animación de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
