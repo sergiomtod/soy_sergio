@@ -442,6 +442,7 @@ section h2 {
     text-align: center;transform: translateY(-50%); 
     color:#4b4b4b;
 }
+
 .contacto .icono.icono:hover {
     color: #2196f3;
     margin: 20px auto;
@@ -572,6 +573,10 @@ footer .contact a:hover {
     margin: 0; 
 }
 /* Estilos de hover específicos */
+/* Cambia color para teléfono Freelancer*/
+/* footer .contact a[href^="https://www.freelancer.com"]:hover i.icono {
+    color: #29b2fe;
+} */
 /* Cambia color para teléfono LinkedIn*/
 footer .contact a[href^="https://www.linkedin.com"]:hover i.icono {
     color: #0077B5;
