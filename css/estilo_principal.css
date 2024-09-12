@@ -128,7 +128,7 @@ section h2 {
     border: none;
     color: azure;
     font-weight:bolder;
-    padding: 14px 28px;
+    padding: 16px 28px;
     cursor: pointer;
     border-radius: 20px;
     background-color: #f9b9f2; 
@@ -144,7 +144,7 @@ section h2 {
 /* estilo seccion datos personales */
 .img_dp {
     width:150px;
-    height:150px;
+    height:auto;
     border-radius:160px;
     border:5px solid #666;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
