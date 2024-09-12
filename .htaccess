@@ -1,0 +1,23 @@
+<IfModule mod_headers.c>
+    # Configuración de Content Security Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://code.jquery.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+
+    # Seguridad adicional
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Redirigir HTTP a HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Deshabilitar la ejecución de scripts en ciertos directorios
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|tpl|cgi|py|pl)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
